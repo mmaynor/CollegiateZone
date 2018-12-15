@@ -1,0 +1,49 @@
+
+<body>
+  <form>
+      <div class = "container" style = "background-color: yellow">
+          <div id="first" class="form-group">
+              <label for="noteId">Enter Sticky Note Id: </label> <input type="text" class="form-control-sm" style="background-color:yellow" [(ngModel)]='stickynote.noteId' name="noteId" id="noteId"><br>
+          </div>
+      <div class="form-group">
+          <label>Enter Sticky Note Name: </label> <input type="text" class="form-control-sm" style="background-color:yellow" [(ngModel)]='stickynote.title' name="title" id="title"><br>
+      </div>
+      <div class="form-group">
+          <label>Enter Sticky Note Message: </label><input type="text" class="form-control-sm" style="background-color:yellow" [(ngModel)]='stickynote.note' name="note" id="note"><br>
+      </div>
+      <div class="form-group">
+          <label>Enter Sticky Note Date: </label><input type="text" class="form-control-sm" style="background-color:yellow" [(ngModel)]='stickynote.stickyDate' name="stickyDate" id="stickyDate"><br>
+      </div>
+      <div class="form-group form-check">
+          <label>Status of Sticky Note: </label>
+          <select (change)="[value]" [(ngModel)]='stickynote.status' name="status" id="status" style="background-color:yellow">
+            <option value="0">--All--</option>
+            <option value ="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+          </select><br><br>
+          <button class = "btn btn-primary" (click)="addStickyNote()"> Add Sticky Note</button>
+      </div>
+    </div>
+  </form>
+  </body>
+
+
+<!-- <form>
+<ul>
+    <li>
+      <a href="#">
+        <h2>Title #1</h2>
+        <label> Sticky Note Id:</label> <input type="text"  [(ngModel)]='stickynote.noteId' name="noteId" id="noteId">
+        <br/>
+  <label>Enter Sticky Note Name:</label> <input type="text"  [(ngModel)]='stickynote.title' name="title" id="title">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #2</h2>
+        <p>Text Content #2</p>
+      </a>
+    </li>
+    […]
+  </ul>
+</form> -->
